@@ -20,20 +20,6 @@ var syslogPrefix string
 var minLogLevel string
 
 func init() {
-	flag.BoolVar(
-		&enableSyslog,
-		"enableSyslog",
-		true,
-		"enable syslog",
-	)
-
-	flag.StringVar(
-		&syslogPrefix,
-		"syslogPrefix",
-		"vcap",
-		"syslog prefix",
-	)
-
 	flag.StringVar(
 		&minLogLevel,
 		"logLevel",
@@ -62,14 +48,6 @@ func New(component string) lager.Logger {
 
 	logger := lager.NewLogger(component)
 	logger.RegisterSink(lager.NewWriterSink(os.Stdout, minLagerLogLevel))
-
-	if enableSyslog {
-		syslogSink, err := lager.NewSyslogSink("", "", syslogPrefix+"."+component, minLagerLogLevel)
-		if err != nil {
-			panic(fmt.Errorf("failed to connect to syslog: %s", err.Error()))
-		}
-		logger.RegisterSink(syslogSink)
-	}
 
 	return logger
 }

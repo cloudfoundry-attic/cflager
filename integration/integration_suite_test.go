@@ -31,8 +31,6 @@ var _ = Describe("CF-Lager", func() {
 		session, err := gexec.Start(exec.Command(testBinary, "--help"), GinkgoWriter, GinkgoWriter)
 		Ω(err).ShouldNot(HaveOccurred())
 		session.Wait()
-		Ω(session.Err.Contents()).Should(ContainSubstring("-enableSyslog"))
-		Ω(session.Err.Contents()).Should(ContainSubstring("-syslogPrefix"))
 		Ω(session.Err.Contents()).Should(ContainSubstring("-logLevel"))
 	})
 

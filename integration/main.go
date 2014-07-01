@@ -4,13 +4,14 @@ import (
 	"errors"
 
 	"github.com/cloudfoundry-incubator/cf-lager"
+	"github.com/pivotal-golang/lager"
 )
 
 func main() {
 	logger := cf_lager.New("cf-lager-integration")
 
-	logger.Debug("some", "debug", "for you")
-	logger.Info("some", "info", "for you")
-	logger.Error("some", "error", "for you", errors.New("error"))
-	logger.Fatal("some", "fatal", "for you", errors.New("fatal"))
+	logger.Debug("component-does-action", lager.Data{"debug-detail": "foo"})
+	logger.Info("another-component-action", lager.Data{"info-detail": "bar"})
+	logger.Error("component-failed-something", errors.New("error"), lager.Data{"error-detail": "baz"})
+	logger.Fatal("component-failed-badly", errors.New("fatal"), lager.Data{"fatal-detail": "quux"})
 }
