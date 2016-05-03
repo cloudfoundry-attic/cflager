@@ -15,8 +15,6 @@ const (
 	FATAL = "fatal"
 )
 
-var enableSyslog bool
-var syslogPrefix string
 var minLogLevel string
 
 func AddFlags(flagSet *flag.FlagSet) {
