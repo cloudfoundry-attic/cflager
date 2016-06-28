@@ -1,4 +1,4 @@
-package cf_lager
+package cflager
 
 import (
 	"flag"

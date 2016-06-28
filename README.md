@@ -5,9 +5,9 @@ A thin wrapper around [github.com/pivotal-golang/lager](https://github.com/pivot
 
 This library provides a flag called `logLevel`. By importing this library, various CF components can share the same name, description, and default value ("info") for this flag.
 
-The logger returned by `cf_lager.New()` will write all logs to `os.Stdout`.
+The logger returned by `cflager.New()` will write all logs to `os.Stdout`.
 
-To use, simply import this package in your `main.go` and call `cf_lager.New(COMPONENT_NAME)` to get a logger.
+To use, simply import this package in your `main.go` and call `cflager.New(COMPONENT_NAME)` to get a logger.
 
 For example:
 
@@ -23,11 +23,11 @@ import (
 )
 
 func main() {
-    cf_lager.AddFlags(flag.CommandLine)
+    cflager.AddFlags(flag.CommandLine)
 
     flag.Parse()
 
-    logger, reconfigurableSink := cf_lager.New("my-component")
+    logger, reconfigurableSink := cflager.New("my-component")
     logger.Info("starting")
 
     // Display the current minimum log level
