@@ -1,5 +1,7 @@
-cf-lager
+cflager
 ========
+
+**Note**: This repository should be imported as `code.cloudfoundry.org/cflager`.
 
 A thin wrapper around [github.com/pivotal-golang/lager](https://github.com/pivotal-golang/lager) for easy use in CF components.
 
@@ -18,7 +20,7 @@ import (
     "flag"
     "fmt"
 
-    "github.com/cloudfoundry-incubator/cf-lager"
+    "github.com/cloudfoundry/cflager"
     "github.com/pivotal-golang/lager"
 )
 
