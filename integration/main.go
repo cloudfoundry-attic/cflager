@@ -5,7 +5,7 @@ import (
 	"flag"
 
 	"code.cloudfoundry.org/cflager"
-	"github.com/pivotal-golang/lager"
+	"code.cloudfoundry.org/lager"
 )
 
 func main() {
