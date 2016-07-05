@@ -3,7 +3,7 @@ cflager
 
 **Note**: This repository should be imported as `code.cloudfoundry.org/cflager`.
 
-A thin wrapper around [github.com/pivotal-golang/lager](https://github.com/pivotal-golang/lager) for easy use in CF components.
+A thin wrapper around [github.com/cloudfoundry/lager](https://github.com/cloudfoundry/lager) for easy use in CF components.
 
 This library provides a flag called `logLevel`. By importing this library, various CF components can share the same name, description, and default value ("info") for this flag.
 
@@ -21,7 +21,7 @@ import (
     "fmt"
 
     "github.com/cloudfoundry/cflager"
-    "github.com/pivotal-golang/lager"
+    "github.com/cloudfoundry/lager"
 )
 
 func main() {
