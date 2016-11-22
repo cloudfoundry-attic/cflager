@@ -1,6 +1,8 @@
 cflager
 ========
 
+# DEPRECATED in favor of [`code.cloudfoundry.org/lager/lagerflags`](https://github.com/cloudfoundry/lager/tree/master/lagerflags)
+
 **Note**: This repository should be imported as `code.cloudfoundry.org/cflager`.
 
 A thin wrapper around [github.com/cloudfoundry/lager](https://github.com/cloudfoundry/lager) for easy use in CF components.
