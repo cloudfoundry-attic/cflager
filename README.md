@@ -3,7 +3,7 @@ cflager
 
 Warning
 =======
-This package has been **DEPRECATED** in favor of [code.cloudfoundry.org/lager/lagerflags](https://github.com/cloudfoundry/lager/tree/master/lagerflags)
+This package has been **DEPRECATED** in favor of [code.cloudfoundry.org/lager/lagerflags](https://github.com/cloudfoundry/lager/tree/master/lagerflags).
 
 Usage
 =====
